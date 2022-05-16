@@ -4,14 +4,14 @@
 #Выходные данные: Целое число.
 def beginning_zeros(number: str) -> int:
     # your code here
+
     # Если в строке одни нули
     if number == '0'*(len(number)):
         return len(number)
+    # к обычному числу
     num_reverse = "".join(reversed(number))
     num_int = int(num_reverse)
     count = 0
-    if num_int == 0:
-        count = 1
     while num_int > 0:
         if num_int % 10 == 0:
             count += 1
