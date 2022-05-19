@@ -13,11 +13,9 @@ from operator import index
 
 
 def index_power(array: list, n: int) -> int:
-    if array[n] in range(len(array)):
-        return array[n]**n
-    elif len(array) < n:
-        return -1
-    
+    if n > len(array) - 1:
+        return (-1)
+    return array[n] ** n
 
 if __name__ == '__main__':
     print('Example:')
